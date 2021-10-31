@@ -36,25 +36,7 @@
         force=yes
         recursive=no
         
-    - name: Copy website files to the server's document root
-      copy:
-        src: /home/ubuntu/app
-        dest: /var/www/html_demo_site_main
-        remote_src: true
-        mode: 0644
-     
-    - name: Apply Nginx template
-      template:
-        src: /home/ubuntu/terraforms/atividade04/nginx.conf.j2
-        dest: /etc/nginx/sites-available/default
-      notify: Restart Nginx
-      
-    - name: Enable new site
-      file:
-        src: /etc/nginx/sites-available/default
-        dest: /etc/nginx/sites-enabled/default
-        state: link
-      notify: Restart Nginx
+    
 
   handlers:
     - name: Restart Nginx
