@@ -2,7 +2,7 @@ resource "aws_security_group" "acesso_geral" {
   name        = "acesso_geral"
   description = "Atividade04"
 
-  ingress = {
+  ingress = [{
     cidr_blocks      = [
       "0.0.0.0/0",
     ]
@@ -14,7 +14,7 @@ resource "aws_security_group" "acesso_geral" {
     security_groups  = []
     self             = false
     to_port          = 0
-  }  
+  }] 
   
   egress = {
     cidr_blocks      = [
