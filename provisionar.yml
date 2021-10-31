@@ -1,4 +1,9 @@
 - hosts: all
+  become: yes
+  vars:
+    server_name: "{{ ansible_default_ipv4.address }}"
+    document_root: /var/www/html
+    app_root: html_demo_site-main
   
   
   tasks: 
@@ -30,10 +35,24 @@
         accept_hostkey=yes
         force=yes
         recursive=no
+     
+    - name: Apply Nginx template
+      template:
+        src: /home/ubuntu/app/nginx.conf.j2
+        dest: /etc/nginx/sites-available/default
+      notify: Restart Nginx
+      
+    - name: Enable new site
+      file:
+        src: /etc/nginx/sites-available/default
+        dest: /etc/nginx/sites-enabled/default
+        state: link
+      notify: Restart Nginx
+
+  handlers:
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
         
-    - name: "Copiar os arquivos para a pasta do nginx"
-      copy:
-        src: /home/ubuntu/app
-        dest: /var/www/html
-        remote_src: true
-        mode: 0644
+   
