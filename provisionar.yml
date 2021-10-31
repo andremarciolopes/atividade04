@@ -38,7 +38,7 @@
      
     - name: Apply Nginx template
       template:
-        src: /home/ubuntu/app/nginx.conf.j2
+        src: /home/ubuntu/terraforms/atividade04/nginx.conf.j2
         dest: /etc/nginx/sites-available/default
       notify: Restart Nginx
       
