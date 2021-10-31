@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-2"
 }
 resource "aws_instance" "maquina_wp" {
-  ami = "#{vars.amis[]}"
+  ami = "#{vars.amis["us-east-2-windows-server-2019"]}"
   instance_type = "#{vars.instance_type.micro}"
   key_name = "terraform-key
   tags = {
