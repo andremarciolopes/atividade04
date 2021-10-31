@@ -7,11 +7,9 @@
 
     - name: "Instala pacotes"
       apt: 
-        name: "{{ item }}"
+        name: "nginx"
         state: latest
-      become: yes
-      with_items:
-        - nginx
+      become: yes      
     
     - name: "add github ssh key"
       copy: >
