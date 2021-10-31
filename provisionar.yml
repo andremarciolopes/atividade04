@@ -11,7 +11,7 @@
         state: latest
       become: yes
       with_items:
-        - nginx-light
+        - nginx
     
     - name: "add github ssh key"
       copy: >
