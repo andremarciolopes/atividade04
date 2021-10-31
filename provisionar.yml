@@ -30,4 +30,3 @@
         accept_hostkey=yes
         force=yes
         recursive=no
-        depth={{ repo_depth }}
