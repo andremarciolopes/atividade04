@@ -36,7 +36,13 @@
         force=yes
         recursive=no
         
-    
+    - name: "Copiar os arquivos da aplicação para o nginx"
+      copy: >
+        src=/home/ubuntu/app/
+        dest=/var/www/html
+        owner=ubuntu
+        group=ubuntu
+        mode=0600    
 
   handlers:
     - name: Restart Nginx
