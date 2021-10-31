@@ -42,6 +42,7 @@
         dest=/var/www/html
         owner=ubuntu
         group=ubuntu
+        remote_src: true
         mode=0600    
 
   handlers:
