@@ -39,8 +39,7 @@
     - name: Copy website files to the server's document root
       copy:
         src: /home/ubuntu/app
-        dest: /var/www/
-        mode: preserve
+        dest: /var/www/html
         remote_src: true
         mode: 0644
      
