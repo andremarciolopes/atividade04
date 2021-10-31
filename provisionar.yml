@@ -2,5 +2,22 @@
   
   
   tasks: 
-    - name: "Criando um arquivo no servidor"
-      shell: "echo 'escrevendo algo no servidor' >> teste.txt"
+#    - name: "Criando um arquivo no servidor"
+#      shell: "echo 'escrevendo algo no servidor' >> teste.txt"
+
+    - name: "Instala pacotes"
+      apt: 
+        name: "{{ item }}"
+        state: latest
+      become: yes
+      with_items:
+        - nginx-light
+    
+    - name: add github ssh key
+      copy: >
+        src=/home/ubuntu/.ssh/id_rsa
+        dest=/home/ubuntu/.ssh/id_rsa
+        owner=ubutu
+        group=ubuntu
+        mode=0600
+
