@@ -18,7 +18,7 @@
       copy: >
         src=/home/ubuntu/.ssh/id_rsa
         dest=/home/ubuntu/id_rsa
-        owner=root
-        group=root
+        owner=ubuntu
+        group=ubuntu
         mode=0600
 
