@@ -3,7 +3,7 @@
   vars:
     server_name: "{{ ansible_default_ipv4.address }}"
     document_root: /var/www
-    app_root: html_demo_site-main
+    app_root: html_demo_site_main
   
   
   tasks: 
@@ -39,7 +39,7 @@
     - name: Copy website files to the server's document root
       copy:
         src: /home/ubuntu/app
-        dest: /var/www/html
+        dest: /var/www/html_demo_site_main
         remote_src: true
         mode: 0644
      
