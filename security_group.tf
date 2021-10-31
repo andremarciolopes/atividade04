@@ -7,7 +7,7 @@ resource "aws_security_group" "acesso_geral" {
       cidr_blocks      = [
         "0.0.0.0/0",
       ]
-      description      = "Para acessar a máquina com todas as portas"
+      description      = "Para acessar a maquina com todas as portas"
       from_port        = 0
       ipv6_cidr_blocks = [
         "::/0",
@@ -25,7 +25,7 @@ resource "aws_security_group" "acesso_geral" {
       cidr_blocks      = [
         "0.0.0.0/0",
       ]
-      description      = "Para acessar a máquina com todas as portas"
+      description      = "Para acessar a maquina de todas as portas"
       from_port        = 0
       ipv6_cidr_blocks = [
         "::/0",
