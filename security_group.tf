@@ -1,4 +1,4 @@
-resource "aws_security_group" "acesso_geral_10 {
+resource "aws_security_group" "acesso_geral_10" {
   name        = "acesso_geral_10"
   description = "Atividade04"
 
