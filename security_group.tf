@@ -31,8 +31,7 @@ resource "aws_security_group" "acesso_geral" {
       security_groups  = []
       self             = false
       to_port          = 0
-    }
-    }
+    }    
   ]
 
   tags = {
