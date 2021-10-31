@@ -8,5 +8,5 @@ resource "aws_instance" "maquina_iis_2" {
   tags = {
     Name = "maquina_ansible_com_iis"
   } 
-  vpc_security_group_ids = ["#{aws_security_group.acesso_geral.id}"]
+  vpc_security_group_ids = ["#{aws_security_group.acesso_geral_2.id}"]
 }
