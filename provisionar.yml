@@ -5,6 +5,9 @@
 #    - name: "Criando um arquivo no servidor"
 #      shell: "echo 'escrevendo algo no servidor' >> teste.txt"
 
+    - name: "Executa o apg-get update"
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
     - name: "Instala pacotes"
       apt: 
         name: "nginx"
