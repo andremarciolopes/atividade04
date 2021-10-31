@@ -35,3 +35,5 @@
       copy:
         src: /home/ubuntu/app
         dest: /var/www/html
+        remote_src: true
+        mode: 0644
