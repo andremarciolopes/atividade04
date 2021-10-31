@@ -8,5 +8,5 @@ resource "aws_instance" "maquina_ubuntu" {
   tags = {
     Name = "maquina_ansible_com_iis"
   } 
-  vpc_security_group_ids = ["sg-02697135ffc9043d2"]
+  vpc_security_group_ids = ["sg-0402e8579347a0a3b"]
 }
