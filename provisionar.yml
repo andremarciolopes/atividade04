@@ -26,7 +26,7 @@
       git: >
         repo=git@github.com:andremarciolopes/MobEAD.git
         key_file=/home/ubuntu/id_rsa
-        dest=/var/www/html
+        dest=/var/www/html/app
         accept_hostkey=yes
         force=yes
         recursive=no
