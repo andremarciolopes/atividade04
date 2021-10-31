@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-2"
 }
-resource "aws_instance" "maquina_iis" {
+resource "aws_instance" "maquina_iis_teste" {
   ami = "ami-08c213ebdf7b857c2"
   instance_type = "t2.micro"
   key_name = "terraform-key"
