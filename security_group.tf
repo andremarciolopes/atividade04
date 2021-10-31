@@ -1,5 +1,5 @@
-resource "aws_security_group" "acesso_geral_3" {
-  name        = "acesso_geral_3"
+resource "aws_security_group" "acesso_geral_4" {
+  name        = "acesso_geral_4"
   description = "Atividade04"
 
   ingress = [
@@ -40,6 +40,6 @@ resource "aws_security_group" "acesso_geral_3" {
   
 
   tags = {
-    Name = "acesso_geral_3"
+    Name = "acesso_geral_4"
   }
 }
