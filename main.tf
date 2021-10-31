@@ -2,9 +2,9 @@ provider "aws" {
   region = "us-east-2"
 }
 resource "aws_instance" "maquina_windows_iis" {
-  ami = "ami-08c213ebdf7b857c2"
+  ami = "ami-00399ec92321828f5"
   instance_type = "t2.micro"
-  key_name = "terraform-2"
+  key_name = "terraform-key"
   tags = {
     Name = "maquina_ansible_com_iis"
   } 
